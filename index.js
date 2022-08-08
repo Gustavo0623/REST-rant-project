@@ -4,10 +4,13 @@ const app = express()
 
 // import router
 
+app.set('view engine', 'jsx')
+app.engine('jsx', require('epress-react-views').createEngine())
+
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) =>{
-    res.send('Hello World')
+    res.render('Home Page')
 })
 
 // another route

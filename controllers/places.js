@@ -2,7 +2,7 @@ const router = require('express').Router()
 
 // get /places
 router.get('/', (req, res) => {
-
+    // places array with restaurant data
     let places = [{
         name: 'H-Thai-ML',
         city: 'Seattle',

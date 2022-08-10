@@ -53,6 +53,16 @@ REST-Rant is an interactive app where users can Review/RANT (comment) about diff
 ## Planning
 
 ##### User Stories:
+    
+    As a User (Customer),
+    I want an application/website,
+    Where I can easily and enjoyably share my experiences and read other user's experiences, good and bad, about restaurants big/small.
+    Because it will give insight to other users about the quality of food/service.
+
+    As a User (Restaurant Owner),
+    I want an application/website, 
+    Where I can easily view my restaurant's reviews,
+    Because it give me insight on how my restaurant is doing and that will allow me to make potential adjustments/improvements accordingly.
 
 ##### Wireframes:
 

@@ -1,6 +1,11 @@
 const router = require('express').Router()
 
-// get /places
+// routes
+
+router.get('/new', (req, res) => {
+  res.render('places/new')
+})
+
 router.get('/', (req, res) => {
     // places array with restaurant data
     let places = [{

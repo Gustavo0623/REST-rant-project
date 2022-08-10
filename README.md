@@ -4,6 +4,8 @@ REST-Rant is an interactive app where users can Review/RANT (comment) about diff
 
 ## Tech Usage
 
+##### CSS Framework: Bootstrap
+
 ##### Stack: MongoDB, Express, NodeJS
 
 ##### Server-Side Rendering: JSX

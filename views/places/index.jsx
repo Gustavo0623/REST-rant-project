@@ -32,6 +32,4 @@ function placesIndex (data) {
     )
 }
 
-app.use(express.urlencoded({ extended: true }))
-
 module.exports = placesIndex

@@ -8,3 +8,10 @@ h1 {
 img {
     max-width: 30%;
 }
+.form-group {
+    margin: 3% 0%;
+}
+form {
+    max-width: 30%;
+    margin: auto;
+}

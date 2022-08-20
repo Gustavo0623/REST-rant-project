@@ -4,7 +4,7 @@ const places = require('../models/places.js')
 // routes
 
 router.get('/new', (req, res) => {
-  res.render('places/new')
+  res.render('places/new', {places})
 })
 
 router.get('/', (req, res) => {
@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
         pic: '/css/images/ricardo-l-LJmzAGwrUoA-unsplash.jpg',
       }]
       
-    res.render('places/index', { places })
+    res.render('places/index', {places})
 })
 
 router.post('/', (req, res) => {

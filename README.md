@@ -1,6 +1,6 @@
 # Project REST-Rant
 
-REST-Rant is an interactive app where users can Review/RANT (comment) about different restaraunts. 
+REST-Rant is an interactive app where users can Review/RANT (comment) about different restaraunts. (edit)
 
 ## Tech Usage
 

@@ -4,11 +4,10 @@ const places = require('../models/places.js')
 // routes
 
 router.get('/', (req, res) => {
-    res.render('places/index')
+    res.render('places/index', {places})
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body)
     if (!req.body.pic) {
     // Default image if one is not provided
       req.body.pic = "https://placekitten.com/400/400"
@@ -20,7 +19,8 @@ router.post('/', (req, res) => {
     req.body.state = 'USA'
     }
   places.push(req.body)
-  res.redirect('/places')
+  console.log(req.body)
+  res.redirect('/places/')
 })
 
 router.get('/new', (req, res) => {

@@ -2,7 +2,6 @@ const React = require('react')
 const Def = require('../default')
 
 function index (data) {
-    console.log(data, 'line5')
     let placesFormatted = data.places.map((place, index) => {
         return (
           <div className="col-sm-6">

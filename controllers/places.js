@@ -19,7 +19,6 @@ router.post('/', (req, res) => {
     req.body.state = 'USA'
     }
   places.push(req.body)
-  console.log(req.body)
   res.redirect('/places/')
 })
 

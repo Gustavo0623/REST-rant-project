@@ -1,17 +1,18 @@
 * {
     text-align: center;
+    margin-bottom: 2%;
 }
 
 body {
     background-color: lightblue;
     text-align: center;
-  }
+}
   
-  main {
+main {
     margin-right: 20px;
     margin-left: 20px;
     background-color: white;
-  }  
+}  
 
 h1 {
     color: cornflowerblue;
@@ -43,15 +44,64 @@ nav ul {
 nav li {
     display: inline;
     margin-right: 25px;
+    margin-top: 0%;
 }
 
 nav a {
     color: white;
     font-size: 1.5em;
     text-decoration: none;
+    margin-top: 0%;
 }
 
 nav a:hover {
     color: pink;
     text-decoration: none;
+}
+
+.img-fluid {
+    max-width: 50%;
+    height: auto;
+}
+.card-holder {
+    background-color: lightblue;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+main {
+    background-color: lightblue;
+}
+.com-title, .comment {
+    padding: auto;
+}
+.comments {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.comment {
+    height: 60%;
+}
+hr {
+    margin: 0%;
+}
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.buttons > form {
+    margin: 0% 0% 2% 0%;
+    min-width: 25%;
+}
+.delete {
+    border: none;
+    background-color: #0000;
 }

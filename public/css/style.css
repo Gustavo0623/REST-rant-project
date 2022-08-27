@@ -82,7 +82,7 @@ main {
     padding: auto;
 }
 .comments {
-    height: 30vh;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

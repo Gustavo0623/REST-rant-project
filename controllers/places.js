@@ -39,12 +39,14 @@ router.get('/new', (req, res) => {
 })
 
 router.get('/:id', (req, res) => {
-    db.Place.findById(req.params.id)
+    db.Place.findOne({ _id: req.params.id})
+    .populate('comments')
     .then(place => {
-      res.render('places/show', {place})
+        console.log(place.comments)
+        res.render('places/show', { place })
     })
     .catch(err => {
-      console.log(err)
+      console.log('err', err)
       res.render('error404')
     })
 })

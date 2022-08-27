@@ -2,6 +2,28 @@ const React = require('react')
 const Def = require('../default')
 
 function show (data) {
+    let comments = (
+        <h3 className="inactive card-text comment">
+            No comments yet!
+        </h3>
+    )
+    if (data.place.comments.length) {
+        comments = data.place.comments.map(c => {
+            return (
+                <div className="border col-sm-4">
+                    <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
+                    <h4>{c.content}</h4>
+                    <h3>
+                        <stong>- {c.author}</stong>
+                    </h3>
+                    <h4>Rating: {c.stars}</h4>
+                    <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
+                        <input type="submit" className="btn btn-danger" value="Delete Comment" />
+                    </form>
+              </div>
+            )
+        })
+    }
     return (
         <Def>
           <main>
@@ -28,7 +50,7 @@ function show (data) {
             <div className="card container-fluid comments">
                 <h2 className="card-title com-title">Comments</h2>
                 <hr/>
-                <p className="card-text comment">No Comments Yet!</p>
+                {comments}
             </div>
             
             <div className="buttons container-fluid">

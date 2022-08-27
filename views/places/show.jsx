@@ -19,6 +19,8 @@ function show (data) {
                                 We proudly serve {data.place.cuisines}
                                 <br/> 
                                 Located in {data.place.city}, {data.place.state}.
+                                <br/>
+                                Founded in the year {data.place.founded}
                             </p>
                         </div>
                     </div>

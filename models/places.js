@@ -7,6 +7,7 @@ const placeSchema = new mongoose.Schema({
     cuisines: {type: String, required: true},
     city: {type: String, default: 'Anytown'},
     state: {type: String, default: 'USA'},
+    founded: String,
 })
 
 module.exports = mongoose.model('Place', placeSchema)

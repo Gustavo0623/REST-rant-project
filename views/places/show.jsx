@@ -18,9 +18,7 @@ function show (data) {
                             <p className='card-text'>
                                 We proudly serve {data.place.cuisines}
                                 <br/> 
-                                Located in {data.place.city}, {data.place.state}.
-                                <br/>
-                                Founded in the year {data.place.founded}
+                                {data.place.showEstablished()}
                             </p>
                         </div>
                     </div>

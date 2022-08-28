@@ -66,8 +66,8 @@ function show (data) {
                 <img src= {data.place.pic} alt="Restaurant display picture" className='img-fluid rounded'/>
             </div>
             <div className="buttons container-fluid">
-                <a href={`/places/${data.id}/edit`} className="btn btn-warning w-25">Edit</a>  
-                <form method="POST" action={`/places/${data.id}?_method=DELETE`} className="btn btn-danger"> 
+                <a href={`/places/${data.place.id}/edit`} className="btn btn-warning w-25">Edit</a>  
+                <form method="POST" action={`/places/${data.place.id}?_method=DELETE`} className="btn btn-danger"> 
                     <button type="submit" className='delete'>Delete</button>
                 </form>
             </div>

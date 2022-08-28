@@ -117,6 +117,8 @@ hr {
 .delete {
     border: none;
     background-color: #0000;
+    width: 100%;
+    height: 100%;
 }
 .form-control, #rant {
     min-height: 5vh;

@@ -28,7 +28,7 @@ function show (data) {
         )
         comments = data.place.comments.map(c => {
             return (
-                <div className="border col-sm-4 comments no-wrap">
+                <div className="border col-sm-4 comments no-wrap rounded">
                     <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
                     <h4>{c.content}</h4>
                     <h3>
@@ -75,7 +75,7 @@ function show (data) {
             <div className="card container-fluid comments">
                 {comments}
             </div>
-            <hr/>
+            <hr id="line-break"/>
             <div className="container-fluid">
                 <h3>RANT! or RAVE!</h3>
                 <form action={`/places/${data.place.id}/comment`} method="POST" className="comment-form">

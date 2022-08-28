@@ -10,14 +10,14 @@ function show (data) {
     if (data.place.comments.length) {
         comments = data.place.comments.map(c => {
             return (
-                <div className="border col-sm-4">
+                <div className="border col-sm-4 comments no-wrap">
                     <h2 className="rant">{c.rant ? 'Rant! 😡' : 'Rave! 😻'}</h2>
                     <h4>{c.content}</h4>
                     <h3>
                         <stong>- {c.author}</stong>
                     </h3>
                     <h4>Rating: {c.stars}</h4>
-                    <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`}>
+                    <form method="POST" action={`/places/${data.place.id}/comment/${c.id}?_method=DELETE`} id = "comment-delete">
                         <input type="submit" className="btn btn-danger" value="Delete Comment" />
                     </form>
               </div>
@@ -47,19 +47,47 @@ function show (data) {
                 </div>
                 <img src= {data.place.pic} alt="Restaurant display picture" className='img-fluid rounded'/>
             </div>
-            <div className="card container-fluid comments">
-                <h2 className="card-title com-title">Comments</h2>
-                <hr/>
-                {comments}
-            </div>
-            
             <div className="buttons container-fluid">
                 <a href={`/places/${data.id}/edit`} className="btn btn-warning w-25">Edit</a>  
                 <form method="POST" action={`/places/${data.id}?_method=DELETE`} className="btn btn-danger"> 
                     <button type="submit" className='delete'>Delete</button>
                 </form>
             </div>
-            
+            <h2 className="card-title com-title">Comments</h2>
+            <div className="card container-fluid comments">
+                {comments}
+            </div>
+            <hr/>
+            <div className="container-fluid">
+                <h3>RANT! or RAVE!</h3>
+                <form action={`/places/${data.place.id}/comment`} method="POST" className="comment-form">
+                    <div className="row">
+                        <div className="form-group col-sm-12">
+                            <label htmlFor="content">Content</label>
+                            <textarea id="content" name="content" className="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="author">Author</label>
+                            <input id="author" name="author" className="form-control" />
+                        </div>
+                        <div className="form-group col-sm-4">
+                            <div className="range">
+                                <p className='min-max'>1</p>
+                                <label htmlFor="stars">Star Rating</label>
+                                <p className="min-max">5</p>
+                            </div>
+                            <input type="range" step="0.5" min="1" max="5" id="stars" name="stars" />
+                        </div>
+                        <div className="form-group col-sm-4">
+                            <label htmlFor="rant">Rant?</label>
+                            <input type="checkbox" id="rant" name="rant" />
+                        </div>
+                    </div>
+                    <input type="submit" className="btn btn-primary" value="Add Comment" />
+                </form>
+            </div>
           </main>
         </Def>
     )

@@ -82,13 +82,26 @@ main {
     padding: auto;
 }
 .comments {
-    height: 45vh;
+    min-height: 45vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 .comment {
     height: 60%;
+}
+.comment-form,
+#comment-delete {
+    max-width: 100%;
+}
+#comment-delete {
+    max-height: 6vh;
+    margin: 0%;
+}
+#rant {
+    display: block;
+    margin: auto;
 }
 hr {
     margin: 0%;
@@ -104,4 +117,23 @@ hr {
 .delete {
     border: none;
     background-color: #0000;
+}
+.form-control, #rant {
+    min-height: 5vh;
+    min-width: 5vh;
+}
+.no-wrap {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+.range {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 0% 2%;
+}
+#stars {
+    width: 100%;
 }
